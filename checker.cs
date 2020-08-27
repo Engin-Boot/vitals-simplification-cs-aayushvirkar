@@ -13,11 +13,18 @@ class Checker
     
    bool bpm_checker(float bpm)
    {
-       if(bpm >70 && bpm <150)
+       if(bpm < 70)
        {
-           return true;
+          Console.WriteLine("BPM is below threshold limit");
+           return false;
        }
-       return false;
+      else if(bpm>150)
+       {
+          Console.WriteLine("BPM is above threshold limit");
+           return false;
+      }
+      Console.WriteLine("Heathy level of BPM");
+      return true;
    }
    
    bool so2_checker(float so2)
@@ -26,6 +33,7 @@ class Checker
       {
          return true;
       }
+      Console.WriteLine("So2 is below threshold limit");
       return false;
    }
    
