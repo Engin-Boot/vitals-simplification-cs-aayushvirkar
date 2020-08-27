@@ -11,7 +11,7 @@ class Checker
         return false;
     }*/
     
-   int Bpm_Checker(float bpm)
+   static int Bpm_Checker(float bpm)
    {
        if(bpm < 70)
        {
@@ -27,7 +27,7 @@ class Checker
       return 1;
    }
    
-   int So2_Checker(float so2)
+  static int So2_Checker(float so2)
    {
       if(so2 > 90)
       {
@@ -37,7 +37,7 @@ class Checker
       return 0;
    }
    
-   int RespRateChecker(float respRate)
+  static int RespRateChecker(float respRate)
    {
       if(respRate < 30)
       {
