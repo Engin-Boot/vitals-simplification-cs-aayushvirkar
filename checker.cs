@@ -11,13 +11,31 @@ class Checker
         return false;
     }*/
     
-   bool bpm_checker()
+   bool bpm_checker(float bpm)
    {
        if(bpm >70 && bpm <150)
        {
            return true;
        }
        return false;
+   }
+   
+   bool so2_checker(float so2)
+   {
+      if(so2 > 90)
+      {
+         return true;
+      }
+      return false;
+   }
+   
+   bool respRateChecker(float respRate)
+   {
+      if(respRate >30 && respRate < 95)
+      {
+         return true;
+      }
+      return false;
    }
    /* static void ExpectTrue(bool expression) {
         if(!expression) {
