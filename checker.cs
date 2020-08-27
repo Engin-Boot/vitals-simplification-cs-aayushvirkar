@@ -4,10 +4,17 @@ using System.Diagnostics;
 class Checker
 {
     static bool vitalsAreOk(float bpm, float spo2, float respRate) {
-        if(spo2<90 || bpm < 70 || bpm > 150 || respRate < 30 || respRate >95){
-            return false;
+        if(bpm>70&&bpm<150)
+        {
+            if(spo2>90)
+            {
+                if(respRate>30 && respRate<95)
+                {
+                    return true;
+                }
+            }
         }
-        return true;
+        return false;
     }
     static void ExpectTrue(bool expression) {
         if(!expression) {
