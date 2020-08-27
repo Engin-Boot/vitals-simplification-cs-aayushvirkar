@@ -11,7 +11,7 @@ class Checker
         return false;
     }*/
     
-   bool Bpm_Checker(float bpm)
+   int Bpm_Checker(float bpm)
    {
        if(bpm < 70)
        {
@@ -27,7 +27,7 @@ class Checker
       return 1;
    }
    
-   bool So2_Checker(float so2)
+   int So2_Checker(float so2)
    {
       if(so2 > 90)
       {
@@ -37,7 +37,7 @@ class Checker
       return 0;
    }
    
-   bool RespRateChecker(float respRate)
+   int RespRateChecker(float respRate)
    {
       if(respRate < 30)
       {
@@ -52,7 +52,6 @@ class Checker
       return 1;
    }
    
-   }
    /* static void ExpectTrue(bool expression) {
         if(!expression) {
             Console.WriteLine("Expected true, but got false");
