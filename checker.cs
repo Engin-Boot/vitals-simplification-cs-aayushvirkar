@@ -39,11 +39,19 @@ class Checker
    
    bool respRateChecker(float respRate)
    {
-      if(respRate >30 && respRate < 95)
+      if(respRate < 30)
       {
-         return true;
+         Console.WriteLine("resPrate is below threshold level");
+         return false;
       }
-      return false;
+      else if(respRate >95)
+      {
+         Console.WriteLine("resprate is above threshold level");
+         return false;
+      }
+      return true;
+   }
+   
    }
    /* static void ExpectTrue(bool expression) {
         if(!expression) {
